@@ -1,0 +1,5 @@
+  <mat-card *ngFor="let item of data">
+    <div><strong>First Name: </strong> {{item.firstName}}</div>
+    <div><strong>Last Name: </strong> {{item.lastName}}</div>
+    <div><strong>ata Of Birth: </strong> {{item.dataOfBirth| date: 'dd/MM/yyyy'}}</div>
+  </mat-card>

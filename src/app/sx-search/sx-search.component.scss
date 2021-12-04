@@ -1,0 +1,52 @@
+.sx-field-fullwidth {
+  width: 80%;
+}
+
+.sx-card {
+  text-align: center;
+}
+
+.sx-buttons {
+  text-align: right;
+
+  button {
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 100px;
+  }
+}
+
+.sx-error {
+  display: flex;
+  flex-direction: column;
+}
+
+.sx-error-text {
+  font-size: 0.9rem;
+  color: var(red);
+}
+
+::ng-deep .mat-card {
+  margin-bottom: 12px;
+}
+
+.card-internals {
+  min-height: 200px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.sx-custom-scroll-bar {
+  height: 14vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sx-custom-scroll-bar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sx-ustom-scroll-bar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .26);
+}

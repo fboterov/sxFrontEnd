@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+$scree-size-width: 400px;
+$scree-size-height: 600px;
+
+// div,
+body {
+  border: solid 1px black;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: $scree-size-width;
+  max-width: $scree-size-width;
+  min-width: $scree-size-width;
+  height: $scree-size-height;
+  max-height: $scree-size-height;
+  min-height: $scree-size-height;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.sx-pointer {
+  cursor: pointer;
+}

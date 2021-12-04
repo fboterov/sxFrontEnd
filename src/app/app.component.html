@@ -1,0 +1,19 @@
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <mat-icon [matMenuTriggerFor]="menu">menu</mat-icon>
+
+      <span class="sx-menu-title">{{title}}</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'SearchMember'">
+      <mat-icon>search</mat-icon>
+      <span>Member Search</span>
+    </button>
+    <button mat-menu-item [routerLink]="'SearchResult'">
+      <mat-icon>list</mat-icon>
+      <span>Search Result</span>
+    </button>
+  </mat-menu>

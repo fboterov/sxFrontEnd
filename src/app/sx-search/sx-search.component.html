@@ -1,0 +1,37 @@
+  <mat-card>
+    <mat-card-header class="sx-card">
+      <mat-form-field appearance="fill" class="sx-field-fullwidth">
+        <mat-label>Service Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-card-header>
+
+    <mat-card>
+      <h2> Search Using </h2>
+      <mat-form-field class="sx-field-fullwidth">
+        <mat-label>member Card Number</mat-label>
+        <input type="text" matInput [(ngModel)]="memberCardNumber" pattern="^[0-9]*$" autocomplete="off" maxlength="10"
+          (keypress)="keyPressNumbers($event)">
+      </mat-form-field>
+
+      <mat-form-field class="sx-field-fullwidth">
+        <mat-label>Policy Number</mat-label>
+        <input type="text" matInput [(ngModel)]="policyNumber" pattern="^[0-9]*$" autocomplete="off" maxlength="10"
+          (keypress)="keyPressNumbers($event)">
+      </mat-form-field>
+    </mat-card>
+    <mat-card-actions class="sx-card; sx-buttons">
+      <button mat-raised-button color="primary" [disabled]="isValidSearch()" (click)="SearchMember()">Search</button>
+      <button mat-raised-button (click)="resetValues()">Reset</button>
+    </mat-card-actions>
+  </mat-card>
+  <div *ngIf="hasHistory()">
+    <mat-list class="sx-custom-scroll-bar">
+      <mat-list-item *ngFor="let item of this.sxApiService.searchHistory | keyvalue" class="sx-pointer">
+        <span [matBadge]="item.value.length" matBadgeOverlap="false"
+          (click)="searchMemberHistory(item.key)">{{item.key}}</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
